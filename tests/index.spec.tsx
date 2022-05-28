@@ -14,6 +14,12 @@ describe("Login", () => {
     const emailLabel = component.getByTestId("account-email");
     expect(emailLabel.getAttribute("name")).toBe("email");
   });
+   test("Password field should have label", () => {
+     const component = render(<SignInSide />);
+     const passwordLabel = component.getByTestId("account-password");
+     expect(passwordLabel.getAttribute("name")).toBe("password");
+   });
+  
   test("Validate function should pass on correct input", () => {
     render(<SignInSide />);
     const text = "text@test.com";
